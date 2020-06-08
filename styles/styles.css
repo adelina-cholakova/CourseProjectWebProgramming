@@ -1,0 +1,645 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --primary-color: #fff;
+    --secondary-color: gray;
+    --emph-color: #326b46;
+}
+/* Main page */
+#main-page, #main-about-us, #make-appointment-page {
+    background-image: url(../images/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: hsla(0,0%,0%,0.6);
+    background-blend-mode: overlay;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+#main-about-us {
+    min-height: 60vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(150, 159, 179, 0.4);
+}
+header .logo a {
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--primary-color);
+}
+header .logo a span {
+    font-weight: 600;
+    color: #184025;
+}
+header .main-nav-container .main-nav ul {
+    display: flex;
+    list-style: none;
+}
+header .main-nav-container .main-nav ul li {
+    margin-right: 20px;
+    border-bottom: 1px solid transparent;
+}
+
+header .main-nav-container .main-nav ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--primary-color);
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.divider {
+    height: 36px;
+    width: 1px;
+    background-color: var(--primary-color);
+}
+header .main-nav-container .main-nav ul li:hover {
+    transition: border 0.2s;
+    border-bottom: 1px solid white;
+}
+.main-page-content {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.main-page-content .title {
+    line-height: 1;
+
+}
+.main-page-content .title h1{
+    font-size: 60px;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.main-page-content .subtitle p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+}
+.appointment-btn, .make-appointment-btn {
+    background-color: var(--emph-color);
+    padding: 20px;
+    border: 1.5px solid var(--emph-color);
+    border-radius: 28px;
+    color: var(--primary-color);
+    font-size: 17px;
+    outline:none;
+    cursor: pointer;
+    margin-top: 50px;
+    font-weight: 600;
+}
+a.appointment-btn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.appointment-btn:hover {
+    border-radius: 28px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+}
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+#services .services-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.services-title {
+    margin-bottom: 30px;
+}
+.services-title p:nth-child(1){
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 50px;
+    color: var(--emph-color);
+}
+.services-title p:nth-child(2), .service-info  {
+    color: var(--secondary-color);
+}
+.services-table .row {
+    display: flex;
+}
+.services-table .row div {
+    margin: 0 10px 10px 10px;
+}
+.service-img img{
+    width: 80px;
+}
+.service-name {
+    color: var(--emph-color);
+    font-weight: bold;
+}
+#personal-touch {
+    display: flex;
+}
+.personal-touch-img-container {
+    width: 50%;
+}
+.personal-touch-img-container img {
+    width: 100%;
+    height: 100%;
+}
+.personal-touch-info {
+    padding: 50px;
+}
+
+.personal-touch-item-info {
+    margin-left: 20px;
+}
+.personal-touch-info .title p:nth-child(1), .personal-touch-item-info p:nth-child(1){
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    color: var(--emph-color);
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1;
+}
+.personal-touch-item-info p:nth-child(1) {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.personal-touch-info .title p:nth-child(2), .personal-touch-item-info p:nth-child(2) {
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+.personal-touch-item-info p:nth-child(2) {
+    font-size: 15px;
+}
+
+.personal-touch-items {
+    display: flex;
+    margin-top: 30px;
+    position: relative;
+    width: 80%;
+}
+.hover-square {
+    position: absolute;
+    left: 0px;
+    height: 40px;
+    width: 40px;
+}
+.tick {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+.personal-touch-items:hover .hover-square {
+    transform: rotate(45deg);
+    transition: 0.5s all;
+    border: 1px solid var(--emph-color);
+}
+#achievements {
+    background-image: url(../images/achievements-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 40vh;
+}
+.achievements-container {
+    display: flex;
+    height: 100%;
+}
+.achievements-info {
+    width: 30%;
+    background: #326b46;
+    color: white;
+}
+.achievements-info p:nth-child(1) {
+    padding: 100px 10px 5px 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.achievements-info p:nth-child(2) {
+    padding: 0 10px 50px 30px;
+    line-height: 2;
+}
+.achievements-values {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    padding: 0 50px;
+    justify-content: space-between;
+}
+.achievements-values .value {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.achievements-values .value span:nth-child(1) {
+    font-size: 48px;
+    font-weight: 800;
+}
+.achievements-values .value span:nth-child(2) {
+    color: #f2f2f2;
+    font-weight: 500;
+    font-size: 15px;
+}
+#doctors .doctors-container {
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+}
+.doctors-title {
+    width: 50%;
+    margin: 0 auto;
+}
+.doctors-title p:nth-child(1) {
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 60px;
+    color: var(--emph-color);
+}
+.doctors-title p:nth-child(2) {
+    color: var(--secondary-color);
+}
+.doctors-list .row {
+    display: flex;
+
+}
+.doctor-info {
+    width: 25%;
+    margin: 30px;
+}
+
+.doctor-info img {
+    width: 160px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.doctor-additional p:nth-child(1) {
+    font-size: 20px;
+    
+}
+.doctor-additional p:nth-child(2) {
+    margin: 5px 0;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    color: var(--emph-color);
+    font-size: 25px;
+}
+.doctor-additional p:nth-child(3) {
+    color: var(--secondary-color);
+}
+.doctor-additional .socials {
+    display: flex;
+    justify-content: center;
+}
+.doctor-additional .socials img {
+    width: 34px;
+    margin: 20px 10px 0 0;
+}
+#main-footer {
+    background-color: #04091e;
+    color: var(--primary-color);
+}
+#main-footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 0;
+}
+
+.denta-care-info {
+    width: 20%;
+}
+.denta-care-info p:nth-child(1) {
+    margin-bottom: 20px;
+}
+.denta-care-info p:nth-child(2) {
+    color: var(--secondary-color);
+    line-height: 1.5;
+}
+.socials-icons {
+    display: flex;
+}
+.socials-icons div {
+    padding: 20px 10px 0 0;
+}
+.socials-icons img{
+    width: 30px;
+}
+.quick-links .footer-nav ul{
+    list-style: none;
+    margin-top: 20px;
+}
+.quick-links .footer-nav ul li {
+    padding-bottom: 4px;
+}
+.quick-links .footer-nav ul li a, .mail p a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+.office>p {
+    margin-bottom: 20px;
+}
+.office div {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: var(--secondary-color);
+}
+.office div img{
+    width: 30px;
+    margin-right: 20px;
+}
+.copyright {
+    border-top: 0.5px solid var(--secondary-color);
+}
+.copyright div {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 0;
+}
+.heart-icon {
+    width: 20px;
+    vertical-align: middle;
+}
+/* About-us */
+.about-us-text-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    font-size: 50px;
+    color: var(--primary-color);
+
+}
+#features .features-container {
+    margin: 100px auto;
+    width: 80%;
+}
+#features .features-container .features-text {
+    text-align: center;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 30px;
+}
+.features-table {
+    margin-top: 50px;
+}
+.features-table .row{
+    display: flex;
+}
+.features-item {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+}
+.features-img img {
+    width: 50px;
+    padding: 17px;
+
+}
+.feature-item-info p {
+    font-size: 15px;
+}
+.feature-item-info p:nth-child(1) {
+    color: #5a9c52;
+}
+.feature-item-info p:nth-child(2) {
+    color: var(--secondary-color);
+}
+#who-we-are {
+    display: flex;
+    background-color: #04091e;
+}
+.who-we-are-img {
+    width: 100%;
+}
+.who-we-are-img img{
+    width: 100%;
+    height: 100%;
+}
+.who-we-are-info {
+    padding: 100px;
+    color: var(--primary-color);
+}
+.info-heading p:nth-child(1), .sub-info-title {
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 50px;
+}
+.sub-info {
+    display: flex;
+}
+.sub-info div {
+    margin: 0 20px 0 0;
+}
+.sub-info-title {
+    font-size: 25px;
+    margin-top: 20px;
+    color: var(--emph-color);
+}
+.info-heading p:nth-child(2), .sub-info-subtitle{
+    color: var(--secondary-color);
+}
+/* Appointment Form */
+#main-form {
+    background-color: #fff;
+    width: 35%;
+    margin: 50px auto;
+    padding: 20px;
+}
+.appointment-form div input, textarea, .date-time-container div{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.appointment-form form div {
+    border-bottom: 1px solid #e6e6e6;
+    margin: 20px 0;
+}
+.date-time-container {
+    display: flex;
+    border-bottom: none !important;
+}
+
+.date-time-container div:nth-child(1) {
+    margin-right:20px;
+}
+
+.error-message {
+    font-size: 15px;
+    color: red;
+}
+
+#date-time-error-container {
+    margin-top: -35px;
+}
+
+/* Responsive */
+
+@media (max-width:1024px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    header .logo {
+        border-bottom: 1px solid var(--primary-color);
+        padding-bottom: 10px;
+    }
+    header .main-nav-container .main-nav ul {
+        flex-direction: column;
+    }
+    .divider {
+        height: 0.5px;
+        width: 100%;
+    }
+    .main-page-content {
+        margin-top: 50px;
+    }
+    .main-page-content .title h1 {
+        font-size: 40px;
+    }
+    .main-page-content .subtitle p {
+        font-size: 20px;
+    }
+    .appointment-btn {
+        margin-bottom: 30px;
+    }
+    #services {
+        padding: 40px 0;
+    }
+    #personal-touch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #personal-touch .personal-touch-img-container {
+        width: 100%;
+    }
+    #doctors .doctors-container .doctors-list .row .doctor-info {
+        margin: 20px 0 20px 0;
+    }
+    #doctors .doctors-container .doctors-title p:nth-child(1){
+        font-size: 40px;
+    }
+    .about-us-text-holder {
+        padding-top: 100px;
+    }
+    #who-we-are {
+        flex-direction: column;
+    }
+    #make-appointment-page {
+        padding-bottom: 20px;
+    }
+    #main-form {
+        margin: 50px auto 0;
+    }
+}
+@media (max-width: 992px) {
+    #services {
+        height: auto;
+    }
+    #services .services-container .services-table .row {
+        flex-wrap: wrap;
+    }
+    #services .services-container .services-table .row .item {
+        flex: 1 0 34%;
+    }
+    #achievements .achievements-container .achievements-info {
+        display: none;
+    }
+    
+}
+@media (max-width: 768px) {
+    #achievements .achievements-container .achievements-info p:nth-child(1) {
+        padding: 22px 10px 5px 30px;
+    }
+    .achievements-values .value span:nth-child(1) {
+        font-size: 20px;
+    } 
+    .achievements-values {
+        text-align: left;
+    }
+    #doctors .doctors-container .doctors-title p:nth-child(1) {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    #doctors .doctors-container .doctors-list .row {
+        flex-wrap: wrap;
+    }
+    #doctors .doctors-container .doctors-list .row .doctor-info {
+        flex: 1 0 34%;
+    }
+    #main-footer .footer-content, .copyright {
+        font-size: 10px;
+    }
+    #main-form .form-header h1 {
+        font-size: 22px;
+    }
+    .date-time-container {
+        width: 60%;
+    }
+}
+@media (max-width: 576px) {
+    #services .services-container .services-title p:nth-child(1), #doctors .doctors-container .doctors-title p:nth-child(1), #personal-touch .personal-touch-info .title p:nth-child(1) {
+        font-size: 30px;
+    }
+    #services .services-container .services-title p:nth-child(2), #doctors .doctors-container .doctors-title p:nth-child(2), #personal-touch .personal-touch-info .title p:nth-child(2) {
+        font-size: 15px;
+    }
+    
+    #features .features-container .features-text {
+        font-size: 20px;
+    }
+    .features-table .row {
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .info-heading p:nth-child(1) {
+        font-size: 30px;
+    }
+    #main-form .form-header h1 {
+        font-size: 18px;
+    }
+    .appointment-form form .appointment-btn-holder .make-appointment-btn {
+        padding: 10px;
+    }
+    .date-time-container {
+        width: 53%;
+    }
+    .doctor-info {
+        width: auto;
+    }
+    #main-footer .footer-content {
+        padding: 20px;
+    }
+    .socials-icons img, .office div img {
+        width: 10px;
+    }
+    .achievements-values .value span:nth-child(2) {
+        font-size: 10px;
+    }
+}
+

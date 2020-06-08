@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Font styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Tenali+Ramakrishna&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="make-appointment-page">
+        <header>
+            <div class="logo">
+                <a href="index.html">denta<span>care</span></a>
+            </div>
+            <div class="main-nav-container">
+                <nav class="main-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        
+                        <li>
+                            <a href="index.html#services">Services</a>
+                        </li>
+                        <li>
+                            <a href="index.html#personal-touch">Achievements</a>
+                        </li>
+                        <li>
+                            <a href="index.html#doctors">Doctors</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="about-us.html">About</a>
+                        </li>
+                        <li>
+                            <a href="make-appointment.html">Make an Appointment</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="main-form">
+            <div class="form-header">
+                <h1>Make an Appointment</h1>
+            </div>
+            <div class="appointment-form">
+                <form action="post" name="appointmentForm" onsubmit="onFormSubmit(event)">
+                    <div class="fill-name-container">
+                        <input type="text" name="full-name" placeholder="Full Name" id="fullname">
+                        <p id="fullname-error-container" class="error-message"></p>
+                    </div>
+                    <div class="email-container">
+                        <input type="text" name="email" placeholder="Email" autocomplete="off" id="email">
+                        <p id="email-error-container" class="error-message"></p>
+                    </div>
+                    <div class="date-time-container">
+                        <div>
+                            <input type="date" name="date" placeholder="Date" id="date">
+                        </div>
+                        <div>
+                            <input type="time" name="time" placeholder="Time" id="time">
+                        </div>
+
+                    </div>
+                    <p id="date-time-error-container" class="error-message"></p>
+                    <div class="message-container">
+                        <textarea name="message" cols="30" rows="7" placeholder="Message" id="textarea"></textarea>
+                    </div>
+                    <div class="appointment-btn-holder">
+                        <button type="submit" class="make-appointment-btn">Make an Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="script/validateForm.js"></script>
+</body>
+
+</html>
